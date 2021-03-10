@@ -92,6 +92,12 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
+.cardSelected {
+  color: #0070f3 !important;
+  border-color: #0070f3;
+}
+
+
 .card:hover,
 .card:focus,
 .card:active {

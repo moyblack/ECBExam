@@ -1,7 +1,26 @@
 import Head from 'next/head'
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
+import axios from 'axios';
+import ServiceInfo from '../components/serviceInfo';
 
-export default function Home() {
+const Services = () => {
+  const [services, setServices] = useState([]);
+
+  const updatePost = (name, phone, dueDate, idService) => {
+    const servicesUrl = `/api/updateService`;
+    const body = {id: idService, estimatedate: dueDate || "", name: name || "", phone: phone || "",};
+    axios.post(servicesUrl, body)
+    .then((res) => {
+      setServices(res.data);
+    })
+  }
+  useEffect(() => {
+    const servicesUrl = `/api/getServices`;
+    axios.get(servicesUrl).then((res) => {
+      setServices(res.data);
+    });
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -11,42 +30,26 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 2!</a>
+          ECB Exam <code className={styles.code}>by Moises Rojas</code>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Pending services:
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          {services.length > 0 && (
+              services.map(service => (
+                <div className={styles.card}>
+                  <ServiceInfo
+                    caracteristicas={service}
+                    onChangeStatus={(name, phone, dueDate, idService) => updatePost(name, phone, dueDate, idService)}
+                  />
+                </div>
+              ))
+            )
+          }
         </div>
       </main>
 
@@ -63,3 +66,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Services;

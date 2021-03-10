@@ -14,7 +14,8 @@ export default function handler(req, res) {
     { id: 3345, description: "change of pads", make:"Volkswagen", model:"Vento", km: 80050, image:"http://3.23.108.188/cars/vento.jpg"},
     { id: 3346, description: "Change Transmission (CVT)", make:"Chevrolet", model:"Aveo NG", estimatedate:"2021/09/07", km: 33460, image:"http://3.23.108.188/cars/aveo.jpg"},
     { id: 3347, description: "Change ligths", make:"Chevrolet", model:"Spark", km: 16098, image:"http://3.23.108.188/cars/spark.jpg"}
-  ], users: [] }).write();
+  ],
+  }).write();
 
   res.status(200).json(db.get('services').value())
 }
