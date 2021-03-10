@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_CONFIG_ENV=default NODE_ENV=development ts-node --project tsconfig.json server/index.tsx",
-    "build": "NODE_CONFIG_ENV=production next build",
-    "start": "NODE_ENV=production NODE_CONFIG_ENV=production ts-node --project tsconfig.json ./server/index.ts",
+    "build": "next build",
+    "start": "ts-node --project tsconfig.json ./server/index.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
