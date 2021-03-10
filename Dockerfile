@@ -1,12 +1,15 @@
 FROM node:10
 
+COPY package.json /src/package.json
+
+RUN cd /src && npm install --loglevel error
+
+COPY . /src
+WORKDIR /src
+
 WORKDIR /app
 
-COPY package.json yarn.lock ./
-RUN yarn
+RUN npm run build
 
-COPY . .
-
-RUN yarn build
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["sh", "-c", "npm start"]

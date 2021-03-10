@@ -16,8 +16,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - docker login -u moyblack -p Kelvin1012!
       - docker build -t $api_REPOSITORY_URI:latest ./.
       - docker tag $api_REPOSITORY_URI:latest $api_REPOSITORY_URI:$IMAGE_TAG
+       - docker logout 
   post_build:
     commands:
       - echo Build completed on `date`
