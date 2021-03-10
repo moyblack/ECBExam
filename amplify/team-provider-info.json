@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ecbexam-dev-23134-authRole",
+      "UnauthRoleArn": "arn:aws:iam::705562453748:role/amplify-ecbexam-dev-23134-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::705562453748:role/amplify-ecbexam-dev-23134-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ecbexam-dev-23134-deployment",
+      "UnauthRoleName": "amplify-ecbexam-dev-23134-unauthRole",
+      "StackName": "amplify-ecbexam-dev-23134",
+      "StackId": "arn:aws:cloudformation:us-east-1:705562453748:stack/amplify-ecbexam-dev-23134/07470ef0-817b-11eb-9932-0e43f2110cc5",
+      "AmplifyAppId": "dfdohdvrahyo1"
+    }
+  }
+}

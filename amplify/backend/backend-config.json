@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "ElasticContainer": {
+      "resourceName": "site",
+      "service": "ElasticContainer",
+      "providerPlugin": "awscloudformation",
+      "domain": "www.opto-plataforma.pw",
+      "restrictAccess": false,
+      "category": "hosting",
+      "categoryPolicies": [],
+      "dependsOn": [
+        {
+          "category": "",
+          "resourceName": "NetworkStack",
+          "attributes": [
+            "ClusterName",
+            "VpcId",
+            "VpcCidrBlock",
+            "SubnetIds",
+            "VpcLinkId",
+            "CloudMapNamespaceId"
+          ]
+        }
+      ],
+      "deploymentMechanism": "FULLY_MANAGED",
+      "environmentMap": {},
+      "mutableParametersState": {},
+      "exposedContainer": {
+        "name": "api",
+        "port": 3000
+      },
+      "output": {},
+      "hostedZoneId": "Z011622227P57CE7DXDTW",
+      "iamAccessUnavailable": true
+    }
+  }
+}
