@@ -7,9 +7,7 @@ RUN cd /src && npm install --loglevel error
 COPY . /src
 WORKDIR /src
 
-WORKDIR /app
-
+EXPOSE 3000
 RUN npm run build
 
-EXPOSE 3000
 CMD ["sh", "-c", "npm start"]
