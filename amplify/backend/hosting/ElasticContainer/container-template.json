@@ -163,7 +163,7 @@
                         "Arn"
                     ]
                 },
-                "Family": "amplify-ecbexam-dev-23134-site",
+                "Family": "amplify-ecbexam-dev-111220-site",
                 "Memory": "1024",
                 "NetworkMode": "awsvpc",
                 "RequiresCompatibilities": [
@@ -263,7 +263,7 @@
         "apiContainerLogGroupA9A8D168": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-                "LogGroupName": "/ecs/amplify-ecbexam-dev-23134-site-api",
+                "LogGroupName": "/ecs/amplify-ecbexam-dev-111220-site-api",
                 "RetentionInDays": 30
             },
             "UpdateReplacePolicy": "Delete",
@@ -275,7 +275,7 @@
                 "LifecyclePolicy": {
                     "LifecyclePolicyText": "{\"rules\":[{\"rulePriority\":10,\"selection\":{\"tagStatus\":\"tagged\",\"tagPrefixList\":[\"latest\"],\"countType\":\"imageCountMoreThan\",\"countNumber\":1},\"action\":{\"type\":\"expire\"}},{\"rulePriority\":100,\"selection\":{\"tagStatus\":\"any\",\"countType\":\"sinceImagePushed\",\"countNumber\":7,\"countUnit\":\"days\"},\"action\":{\"type\":\"expire\"}}]}"
                 },
-                "RepositoryName": "amplify-ecbexam-dev-23134-hosting-site-api"
+                "RepositoryName": "amplify-ecbexam-dev-111220-hosting-site-api"
             },
             "UpdateReplacePolicy": "Retain",
             "DeletionPolicy": "Retain"
@@ -506,7 +506,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment"
                                         ]
                                     ]
                                 },
@@ -518,7 +518,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment/*"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment/*"
                                         ]
                                     ]
                                 }
@@ -696,7 +696,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment"
                                         ]
                                     ]
                                 },
@@ -708,7 +708,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment/*"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment/*"
                                         ]
                                     ]
                                 }
@@ -788,7 +788,7 @@
                                     "Version": "1"
                                 },
                                 "Configuration": {
-                                    "S3Bucket": "amplify-ecbexam-dev-23134-deployment",
+                                    "S3Bucket": "amplify-ecbexam-dev-111220-deployment",
                                     "S3ObjectKey": {
                                         "Ref": "ParamZipPath"
                                     }
@@ -960,10 +960,10 @@
                     }
                 ],
                 "ArtifactStore": {
-                    "Location": "amplify-ecbexam-dev-23134-deployment",
+                    "Location": "amplify-ecbexam-dev-111220-deployment",
                     "Type": "S3"
                 },
-                "Name": "amplify-ecbexam-dev-23134-site-service-api-3000"
+                "Name": "amplify-ecbexam-dev-111220-site-service-api-3000"
             },
             "DependsOn": [
                 "ApiPipelinePipelineRoleDefaultPolicyB3AD67CF",
@@ -1027,7 +1027,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment"
                                         ]
                                     ]
                                 },
@@ -1039,7 +1039,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment/*"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment/*"
                                         ]
                                     ]
                                 }
@@ -1061,7 +1061,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment"
                                         ]
                                     ]
                                 },
@@ -1073,7 +1073,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment/*"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment/*"
                                         ]
                                     ]
                                 }
@@ -1311,7 +1311,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment"
                                         ]
                                     ]
                                 },
@@ -1323,7 +1323,7 @@
                                             {
                                                 "Ref": "AWS::Partition"
                                             },
-                                            ":s3:::amplify-ecbexam-dev-23134-deployment/*"
+                                            ":s3:::amplify-ecbexam-dev-111220-deployment/*"
                                         ]
                                     ]
                                 }
@@ -1350,7 +1350,7 @@
                 "DomainValidationOptions": [
                     {
                         "DomainName": "*.opto-plataforma.pw",
-                        "HostedZoneId": "Z011622227P57CE7DXDTW"
+                        "HostedZoneId": "Z01815262DYM35XWOJN9H"
                     }
                 ],
                 "ValidationMethod": "DNS"
@@ -1472,7 +1472,7 @@
                         "HttpHeaderConfig": {
                             "HttpHeaderName": "x-cf-token",
                             "Values": [
-                                "64f5bc6e-a622-4d07-b0e3-0a940a7f7cb1"
+                                "84d71b48-af5f-4b11-a639-4ce78e1a47e2"
                             ]
                         }
                     }
@@ -1511,12 +1511,12 @@
                             "CustomOriginConfig": {
                                 "OriginProtocolPolicy": "https-only"
                             },
-                            "DomainName": "lb-amplify-ecbexam-dev-23134.opto-plataforma.pw",
+                            "DomainName": "lb-amplify-ecbexam-dev-111220.opto-plataforma.pw",
                             "Id": "LoadBalancer-origin",
                             "OriginCustomHeaders": [
                                 {
                                     "HeaderName": "x-cf-token",
-                                    "HeaderValue": "64f5bc6e-a622-4d07-b0e3-0a940a7f7cb1"
+                                    "HeaderValue": "84d71b48-af5f-4b11-a639-4ce78e1a47e2"
                                 }
                             ]
                         }
@@ -1534,7 +1534,7 @@
         "RecordSetGroup": {
             "Type": "AWS::Route53::RecordSetGroup",
             "Properties": {
-                "HostedZoneId": "Z011622227P57CE7DXDTW",
+                "HostedZoneId": "Z01815262DYM35XWOJN9H",
                 "RecordSets": [
                     {
                         "AliasTarget": {
@@ -1551,7 +1551,7 @@
                                 ]
                             }
                         },
-                        "Name": "lb-amplify-ecbexam-dev-23134.opto-plataforma.pw",
+                        "Name": "lb-amplify-ecbexam-dev-111220.opto-plataforma.pw",
                         "Type": "A"
                     },
                     {
@@ -1581,7 +1581,7 @@
             }
         },
         "PipelineName": {
-            "Value": "amplify-ecbexam-dev-23134-site-service-api-3000"
+            "Value": "amplify-ecbexam-dev-111220-site-service-api-3000"
         },
         "ContainerNames": {
             "Value": "api"
@@ -1595,7 +1595,7 @@
                         {
                             "Ref": "AWS::Region"
                         },
-                        ".console.aws.amazon.com/codesuite/codepipeline/pipelines/amplify-ecbexam-dev-23134-site-service-api-3000/view"
+                        ".console.aws.amazon.com/codesuite/codepipeline/pipelines/amplify-ecbexam-dev-111220-site-service-api-3000/view"
                     ]
                 ]
             }
@@ -1609,7 +1609,7 @@
             }
         },
         "LoadBalancerCnameDomainName": {
-            "Value": "lb-amplify-ecbexam-dev-23134.opto-plataforma.pw"
+            "Value": "lb-amplify-ecbexam-dev-111220.opto-plataforma.pw"
         },
         "CloudfrontDistributionAliasDomainName": {
             "Value": {

@@ -7,8 +7,8 @@
     "config": {
       "SourceDir": ".",
       "DistributionDir": ".next",
-      "BuildCommand": "yarn build",
-      "StartCommand": "yarn start",
+      "BuildCommand": "npm.cmd run-script build",
+      "StartCommand": "npm.cmd run-script start",
       "ServerlessContainers": true
     }
   },
